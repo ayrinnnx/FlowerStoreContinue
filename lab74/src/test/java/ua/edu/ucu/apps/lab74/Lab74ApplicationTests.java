@@ -45,7 +45,8 @@ class Lab74ApplicationTests {
 		items.add(romashka);
 		items.add(cactus);
 
-		assertTrue(dhlDeliveryStrategy.deliver(items).contains("DHL Delivery"))
+		assertTrue(dhlDeliveryStrategy.deliver(items).contains("DHL Delivery"));
+		assertTrue(postDeliveryStrategy.deliver(items).contains("Post Delivery"));
 
 	}
 
