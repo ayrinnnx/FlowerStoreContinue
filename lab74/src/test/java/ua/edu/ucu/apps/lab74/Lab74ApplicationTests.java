@@ -8,7 +8,10 @@ import ua.edu.ucu.apps.lab74.flowers.FlowerType;
 import ua.edu.ucu.apps.lab74.flowers.Order;
 import ua.edu.ucu.apps.lab74.strategy.CreditCardPaymentStrategy;
 import ua.edu.ucu.apps.lab74.strategy.PayPalPaymentStrategy;
+import ua.edu.ucu.apps.lab74.delivery.DHLDeliveryStrategy;
+import ua.edu.ucu.apps.lab74.delivery.PostDeliveryStrategy;
 
+import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
@@ -28,6 +31,21 @@ class Lab74ApplicationTests {
 
 		order.addItem(romashka);
 		assertTrue(payPalPaymentStrategy.pay(order.calculateTotalPrice()));
+
+	}
+
+	@Test
+	void testDelivery() {
+		Flower romashka = new Flower(12.0, 5.2, FlowerColor.BLUE, FlowerType.ROMASHKA);
+		Flower cactus = new Flower(188.0, 0.1, FlowerColor.GREEN, FlowerType.CACTUS);
+
+		DHLDeliveryStrategy dhlDeliveryStrategy = new DHLDeliveryStrategy();
+		PostDeliveryStrategy postDeliveryStrategy = new PostDeliveryStrategy();
+		ArrayList<Item> items = new ArrayList<>();
+		items.add(romashka);
+		items.add(cactus);
+
+		assertTrue(dhlDeliveryStrategy.deliver(items).contains("DHL Delivery"))
 
 	}
 
