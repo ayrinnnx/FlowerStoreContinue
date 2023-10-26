@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @AllArgsConstructor @Getter
-public class Flower {
+public class Flower extends Item{
     private double price;
     private double sepalLength;
     private FlowerColor color;
