@@ -3,7 +3,7 @@ package ua.edu.ucu.apps.lab74.flowers;
 import lombok.Getter;
 
 @Getter
-public class Item {
+public abstract class Item {
     private String description;
-    private double price;
+    public abstract double getPrice();
 }
