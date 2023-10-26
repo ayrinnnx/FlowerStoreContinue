@@ -2,8 +2,8 @@ package ua.edu.ucu.apps.lab74.delivery;
 
 import ua.edu.ucu.apps.lab74.flowers.Item;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface Delivery {
-    String deliver(List<Item> items);
+    String deliver(ArrayList<Item> items);
 }

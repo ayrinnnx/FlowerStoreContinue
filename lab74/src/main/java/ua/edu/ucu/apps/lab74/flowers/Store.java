@@ -15,4 +15,8 @@ public class Store {
         }
         return foundItems;
     }
+
+    public void add_item(Item item) {
+        this.items.add(item);
+    }
 }
