@@ -6,6 +6,7 @@ import ua.edu.ucu.apps.lab74.flowers.Flower;
 import ua.edu.ucu.apps.lab74.flowers.FlowerColor;
 import ua.edu.ucu.apps.lab74.flowers.FlowerType;
 import ua.edu.ucu.apps.lab74.flowers.Order;
+import ua.edu.ucu.apps.lab74.flowers.Item;
 import ua.edu.ucu.apps.lab74.strategy.CreditCardPaymentStrategy;
 import ua.edu.ucu.apps.lab74.strategy.PayPalPaymentStrategy;
 import ua.edu.ucu.apps.lab74.delivery.DHLDeliveryStrategy;
